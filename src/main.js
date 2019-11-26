@@ -5,6 +5,7 @@ import Home from './components/Home.vue';
 import Login from './components/Login.vue';
 import NavBar from './components/core/NavBar.vue';
 import SideNav from './components/core/SideNav.vue';
+import AddUser from './components/AddUser.vue';
 import Vuex from "vuex"
 import VueSession from 'vue-session'
 import VueLocalStorage from 'vue-localstorage'
@@ -38,7 +39,13 @@ const routes = [
         next();
       }
 
-  }
+  },
+    children:[
+      {
+        path:'/adduser',
+        component:AddUser
+      }
+    ]
   }
 ];
 
