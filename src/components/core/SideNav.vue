@@ -26,16 +26,16 @@
             <a href="#" class="nav-link active">
               <i class="nav-icon fa fa-dashboard"></i>
               <p>
-                Dashboard
+                Action
                 <i class="right fa fa-angle-left"></i>
               </p>
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="#" class="nav-link active">
+                <router-link to="/adduser"><a class="nav-link active">
                   <i class="fa fa-circle-o nav-icon"></i>
-                  <p>Dashboard v1</p>
-                </a>
+                  <p>Add User</p>
+                </a></router-link>
               </li>
               <li class="nav-item">
                 <a href="#" class="nav-link">
@@ -66,8 +66,6 @@
       return{
         uname:localStorage.getItem('uname'),
         imgSrc:"data:"+localStorage.getItem('type')+";"+"base64,"+localStorage.getItem('image')
-        /*image:localStorage.getItem('image'),
-        type:localStorage.getItem('type')*/
       }
     },
     name: 'SideNav'

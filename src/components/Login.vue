@@ -47,6 +47,7 @@
 
         axios.get("http://localhost:8082/app/users/login/"+email+"/"+password)
           .then(response=>{
+            console.log(response);
             if(response.data !=null){
               localStorage.clear();
               this.$store.commit("setAuthentication",true);
